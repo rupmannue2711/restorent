@@ -23,13 +23,14 @@ describe('AppComponent', () => {
   it(`should have as title 'routing-blog'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('routing-blog');
+    expect(app.title).toEqual('service in angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('routing-blog app is running!');
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.content-span')?.textContent).toContain('Hello');
   });
+  
 });
