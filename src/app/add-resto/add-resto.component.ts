@@ -7,17 +7,24 @@ import { RestoService } from '../resto.service';
   styleUrls: ['./add-resto.component.css'],
 })
 export class AddRestoComponent implements OnInit {
-  constructor(private resto: RestoService) {}
+  alert: boolean = false;
   addResto = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
     username: new FormControl(''),
   });
+  constructor(private resto: RestoService) {}
+
   ngOnInit(): void {}
   collectResto() {
     // console.warn(this.addResto.value);
     this.resto.saveResto(this.addResto.value).subscribe((result) => {
-      console.warn(result);
+      this.alert = true;
+      // console.warn("result is here", result);
     });
+    this.addResto.reset({});
+  }
+  closeAlert() {
+    this.alert = false;
   }
 }

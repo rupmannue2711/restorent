@@ -1,4 +1,11 @@
-<h1>add-resto works!</h1>
+<h1>Add New Resto</h1>
+<div *ngIf="alert"  class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>success!</strong> You should check in on some of those fields below.
+    <button (click)="closeAlert()"  type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
 <form [formGroup]="addResto" (ngSubmit)="collectResto()">
     <div class="form-group">
         <label for="exampleInputEmail1">Name</label>

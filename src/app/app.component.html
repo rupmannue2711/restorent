@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Resto</a>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" routerLink="">Resto</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,10 +8,11 @@
         <div class="navbar-nav">
             <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only"></span></a> -->
             <a  class="nav-item nav-link "routerLink="add">Add Restorent</a>
-            <a  class="nav-item nav-link "routerLink="list">List Restorent</a>
+            <a  class="nav-item nav-link "routerLink="">List Restorent</a>
             <a  class="nav-item nav-link "routerLink="login">Login Restorent</a>
             <a  class="nav-item nav-link "routerLink="register">Register Restorent</a>
-            <a  class="nav-item nav-link "routerLink="update">Update Restorent</a>
+            <!-- <a class="nav-item nav-link " routerLink="restorent"> Restorent</a> -->
+            <!-- <a  class="nav-item nav-link "routerLink="update">Update Restorent</a> -->
         </div>
     </div>
 </nav>
@@ -21,7 +22,11 @@
 
 <div class="container">
     <router-outlet></router-outlet>
-
+<footer class="footer">
+    <p>
+        footer user list
+    </p>
+</footer>
 </div>
 
 
